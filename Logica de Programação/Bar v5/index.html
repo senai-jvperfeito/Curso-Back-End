@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bar.css" />
+    <script src="barv5.js"></script>
+    <title>Bar</title>
+  </head>
+  <body>
+    <svg viewbox="0 0 100 20">
+      <defs>
+        <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="5%" stop-color="#03e9f4" />
+          <stop offset="95%" stop-color="#123752" />
+        </linearGradient>
+        <pattern
+          id="wave"
+          x="0"
+          y="0"
+          width="120"
+          height="20"
+          patternUnits="userSpaceOnUse"
+        >
+          <path
+            id="wavePath"
+            d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z"
+            mask="url(#mask)"
+            fill="url(#gradient)"
+          >
+            <animateTransform
+              attributeName="transform"
+              begin="0s"
+              dur="1.5s"
+              type="translate"
+              from="0,0"
+              to="40,0"
+              repeatCount="indefinite"
+            />
+          </path>
+        </pattern>
+      </defs>
+      <text
+        text-anchor="middle"
+        x="50"
+        y="15"
+        font-size="17"
+        fill="url(#wave)"
+        fill-opacity="0.6"
+      >
+        Meu Boteco
+      </text>
+      <text
+        text-anchor="middle"
+        x="50"
+        y="15"
+        font-size="17"
+        fill="url(#gradient)"
+        fill-opacity="0.1"
+      >
+        Meu Boteco
+      </text>
+    </svg>
+
+    <div class="content">
+      <div class="visible">
+        <p>Hello</p>
+        <ul>
+          <li>Freguês !</li>
+          <li>Zákazník !</li>
+          <li>Kunde !</li>
+          <li>Klant !</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="button">
+      <button onclick="bar()" id="chamargarçom">Chamar Garçom!</button>
+      <button onclick="comanda()" id="buttonComanda">Ver Comanda</button>
+      <button onclick="pagar()" id="pagamento">Pagar a Conta</button>
+    </div>
+
+    <table hidden="hidden" class="tb" id="tabela">
+      <thead>
+        <th>Chopp</th>
+        <th>Tamanho</th>
+        <th>Quantidade</th>
+      </thead>
+      <tbody>
+        <tr id="PilsenM">
+          <td>Pilsen</td>
+          <td>M</td>
+        </tr>
+        <tr id="PilsenP">
+          <td>Pilsen</td>
+          <td>P</td>
+        </tr>
+        <tr id="IpaM">
+          <td>Ipa</td>
+          <td>M</td>
+        </tr>
+        <tr id="IpaP">
+          <td>Ipa</td>
+          <td>P</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td id="total"></td>
+          <td id="total">Total:</td>
+          <td id="contatotal"></td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <h6>JV Perfeito</h6>
+  </body>
+</html>
