@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="text-center">Repositórios</h3>
+          <div class="row" style="text-align: center">
+            <div class="col-md-4">
+              <button
+                type="button"
+                onclick="logica()"
+                class="btn btn-block btn-info"
+              >
+                Lógica de Programação
+              </button>
+            </div>
+            <div class="col-md-4">
+              <button
+                type="button"
+                onclick="versionamento()"
+                class="btn btn-block btn-info"
+              >
+                Versionamento
+              </button>
+            </div>
+            <div class="col-md-4">
+              <button
+                type="button"
+                onclick="metodologia()"
+                class="btn btn-block btn-info"
+              >
+                Metodologias Ágeis
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  function logica() {
+    window.open(
+      'https://github.com/senai-jvperfeito/Curso-Back-End/tree/main/Logica%20de%20Programa%C3%A7%C3%A3o',
+      '_blank'
+    );
+  }
+
+  function versionamento() {
+    window.open(
+      'https://github.com/senai-jvperfeito/Curso-Back-End/tree/main/Versionamento',
+      '_blank'
+    );
+  }
+
+  function metodologia() {
+    window.open(
+      'https://github.com/senai-jvperfeito/Curso-Back-End/tree/main/Metodologia%20Agil',
+      '_blank'
+    );
+  }
+</script>
